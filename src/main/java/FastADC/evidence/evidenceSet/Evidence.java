@@ -9,10 +9,6 @@ public class Evidence {
     private long clue;
     public LongBitSet bitset;
 
-    public Evidence() {
-
-    }
-
     public Evidence(long _satisfied, long _count, LongBitSet cardinalityMask, LongBitSet[] correctMap) {
         clue = _satisfied;
         count = _count;

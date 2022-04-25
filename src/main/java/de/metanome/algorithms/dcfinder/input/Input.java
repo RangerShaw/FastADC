@@ -37,8 +37,8 @@ public class Input {
 
         parsedColumns = buildParsedColumns(columns);
         intInput = buildIntInput(parsedColumns);
-        System.out.println("  [Input] Tuple count: " + rowCount);
-        System.out.println("  [Input] Attribute count: " + colCount);
+        System.out.println(" [Input] # of Tuples: " + rowCount);
+        System.out.println(" [Input] # of Attributes: " + colCount);
     }
 
     private Column[] readRelationalInputToColumns(RelationalInput relationalInput, int rowLimit) {
