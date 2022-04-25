@@ -116,7 +116,7 @@ abstract public class ClueSetBuilder {
             count += 2;
         }
 
-        System.out.println("  [CLUE BUILDER] # of bits in clue: " + count);
+        System.out.println("  [CLUE] # of bits in clue: " + count);
         if (count > 64) throw new UnsupportedOperationException("Too many predicates! Not supported yet!");
     }
 
