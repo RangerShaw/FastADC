@@ -18,12 +18,8 @@ public class EvidenceSet implements Iterable<Evidence> {
     private LongBitSet cardinalityMask;
     private LongBitSet[] correctMap;
 
-    //private HashObjLongMap<Evidence> evidenceSet = HashObjLongMaps.newMutableMap();
-    private HashMap<Long, Evidence> clueToEvidence = new HashMap<>(); // TODO: compare HashMap and HashLongObjMap
-    //private Map<Long, Evidence> clueToEvidence = HashLongObjMaps.newMutableMap();
+    private HashMap<Long, Evidence> clueToEvidence = new HashMap<>();
 
-    public EvidenceSet() {
-    }
 
     public EvidenceSet(PredicateBuilder pBuilder, LongBitSet[] _correctMap) {
         correctMap = _correctMap;

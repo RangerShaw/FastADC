@@ -11,7 +11,7 @@ public class Pli {
     Map<Integer, Integer> keyToClusterIdMap;
 
     public Pli(List<Cluster> rawClusters, int[] keys, Map<Integer, Integer> translator) {
-        this.clusters =rawClusters;
+        this.clusters = rawClusters;
         this.keys = keys;
         this.keyToClusterIdMap = translator;
     }

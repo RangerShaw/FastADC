@@ -12,7 +12,7 @@ public class PredicateOrganizer {
 
     private final int nPredicates;
     private final EvidenceSet evidenceSet;
-    private int[] indexes;
+    private final int[] indexes;    // new index -> original index
 
     public PredicateOrganizer(int n, EvidenceSet evidences) {
         nPredicates = n;

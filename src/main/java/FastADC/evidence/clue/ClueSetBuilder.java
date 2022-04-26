@@ -14,22 +14,13 @@ abstract public class ClueSetBuilder {
 
     abstract public HashLongLongMap buildClueSet();
 
-    HashLongLongMap accumulateClues(long[]... satisfiedArrays) {
-        HashLongLongMap satisfiedMap = HashLongLongMaps.newMutableMap();
-        for (long[] map : satisfiedArrays)
-            for (long satisfied : map)
-                satisfiedMap.addValue(satisfied, 1L, 0L);
-        return satisfiedMap;
+    HashLongLongMap accumulateClues(long[]... clueArrays) {
+        HashLongLongMap clueSet = HashLongLongMaps.newMutableMap();
+        for (long[] map : clueArrays)
+            for (long clue : map)
+                clueSet.addValue(clue, 1L, 0L);
+        return clueSet;
     }
-
-//    HashObjLongMap<LongBitSet> accumulateSatisfiedArray(LongBitSet[]... satisfiedArrays) {
-//        HashObjLongMap<LongBitSet> satisfiedMap = HashObjLongMaps.newMutableMap();
-//        for (LongBitSet[] map : satisfiedArrays)
-//            for (LongBitSet satisfied : map)
-//                satisfiedMap.addValue(satisfied, 1L, 0L);
-//        return satisfiedMap;
-//    }
-
 
     /**
      * Predicate EQ (and GT) of one column pair

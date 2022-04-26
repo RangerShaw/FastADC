@@ -22,10 +22,12 @@ public class FastADC {
     // configure of PliShardBuilder
     private final int shardLength;
 
+    // configure of EvidenceSetBuilder
+    private final boolean linear;
+
     // configure of ApproxCoverSearcher
     private final double threshold;
 
-    private final boolean linear;
 
     private String dataFp;
     private Input input;

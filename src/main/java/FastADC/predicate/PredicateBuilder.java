@@ -68,7 +68,6 @@ public class PredicateBuilder {
         for (Predicate p1 : predicates) {
             LongBitSet mutex = new LongBitSet();
             for (Predicate p2 : predicates) {
-                //if (!p1.equals(p2) && p1.getOperand1().equals(p2.getOperand1()) && p1.getOperand2().equals(p2.getOperand2()))
                 if (p1.getOperand1().equals(p2.getOperand1()) && p1.getOperand2().equals(p2.getOperand2()))
                     mutex.set(predicateIdProvider.getIndex(p2));
             }
@@ -115,17 +114,6 @@ public class PredicateBuilder {
         for (int l = predicateSet.nextSetBit(0); l >= 0; l = predicateSet.nextSetBit(l + 1))
             inverse.set(inverseMap[l]);
         return new PredicateSet(inverse);
-    }
-
-    public LongBitSet getMutex(int index) {
-        return mutexMap[index];
-    }
-
-    public LongBitSet getMutex(LongBitSet ps) {
-        LongBitSet mutex = new LongBitSet();
-        for (int i = ps.nextSetBit(0); i >= 0; i = ps.nextSetBit(i + 1))
-            mutex.or(mutexMap[i]);
-        return mutex;
     }
 
     public List<List<Predicate>> getPredicateGroupsNumericalSingleColumn() {
