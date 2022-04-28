@@ -33,8 +33,9 @@ For experiments concerning the number of threads, it is recommended to disable/e
 
 ## Comparative Experiments
 
-FastADC are compared to other two approximate DC discovery methods, DCFinder and ADCMiner.
-The source code DCFinder can be found [here](https://github.com/HPI-Information-Systems/metanome-algorithms/tree/master/dcfinder).
+FastADC are compared to other two approximate DC discovery methods, [DCFinder](https://dl.acm.org/doi/10.14778/3368289.3368293) 
+and [ADCMiner](https://dl.acm.org/doi/10.14778/3401960.3401966).
+The source code of DCFinder can be found [here](https://github.com/HPI-Information-Systems/metanome-algorithms/tree/master/dcfinder).
 And we implement ADCMiner with our best effort [here](https://github.com/RangerShaw/ADCMiner).
 
 ## License
